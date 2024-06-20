@@ -1,15 +1,15 @@
 
 import dotenv from "dotenv";
 import cors from "cors";
-import connectDB from "./db/index.js";
+import connectDB from "./api/db/index.js";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-import userRoutes from "./routes/user.routes.js";
-import chatRoutes from "./routes/chat.routes.js";
-import messageRoutes from "./routes/message.routes.js";
-import archiveRoutes from "./routes/archive.routes.js"
-import notificationRoutes from "./routes/notification.routes.js"
-import { app, server } from "./socket/socket.js";
+import userRoutes from "./api/routes/user.routes.js";
+import chatRoutes from "./api/routes/chat.routes.js";
+import messageRoutes from "./api/routes/message.routes.js";
+import archiveRoutes from "./api/routes/archive.routes.js"
+import notificationRoutes from "./api/routes/notification.routes.js"
+import { app, server } from "./api/socket/socket.js";
 dotenv.config();
 
 // cors config
