@@ -16,13 +16,14 @@ const io = new Server(server, {
         credentials: true,
     }
 });
+console.log("Socket CORS Origin:", FRONTEND_ORIGIN); // Debugging log
 const userSocketMap = {};
 
 export const getReceiverSocketId = (receiverId) => {
     return userSocketMap[receiverId];
 };
 io.on("connection", (socket) => {
-
+    console.log("New socket connection:", socket.id); // Debugging log
     const userId = socket.handshake.query.userId;
     if (userId && userId !== "undefined") userSocketMap[userId] = socket.id;
     io.emit("getOnlineUsers", Object.keys(userSocketMap));
