@@ -58,7 +58,7 @@ export const register = asyncHandler(async (req, res) => {
         const options = {
             httpOnly: process.env.NODE_ENV === 'production',
             secure: process.env.NODE_ENV === 'production',
-            sameSite: process.env.NODE_ENV === 'production' ? true : "none"
+            sameSite: "None"
         };
         return res
             .status(201)
@@ -96,7 +96,7 @@ export const login = asyncHandler(async (req, res) => {
         const options = {
             httpOnly: process.env.NODE_ENV === 'production',
             secure: process.env.NODE_ENV === 'production',
-            sameSite: process.env.NODE_ENV === 'production' ? true : "none"
+            sameSite: "None"
         };
         return res
             .status(201)
@@ -271,7 +271,7 @@ export const logoutUser = asyncHandler(async (req, res) => {
         const options = {
             httpOnly: process.env.NODE_ENV === 'production',
             secure: process.env.NODE_ENV === 'production',
-            sameSite: process.env.NODE_ENV === 'production' ? true : "none"
+            sameSite: "None"
         };
         return res
             .status(200)
