@@ -18,7 +18,7 @@ const FRONTEND_ORIGIN = process.env.NODE_ENV === 'production'
     ? process.env.FRONTEND_ORIGIN_PROD
     : process.env.FRONTEND_ORIGIN_DEV;
 app.use(cors({
-    origin: "https://talhamehmood.netlify.app",
+    origin: FRONTEND_ORIGIN,
     credentials: true
 }));
 app.use(bodyParser.json())
