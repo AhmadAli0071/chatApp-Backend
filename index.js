@@ -18,7 +18,7 @@ const FRONTEND_ORIGIN = process.env.NODE_ENV === 'production'
     ? process.env.FRONTEND_ORIGIN_PROD
     : process.env.FRONTEND_ORIGIN_DEV;
 app.use(cors({
-    origin: FRONTEND_ORIGIN,
+    origin: "*",
     credentials: true
 }));
 app.use(bodyParser.json())
