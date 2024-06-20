@@ -25,7 +25,7 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 // routes declaration
 
-app.get('/api/v1', (_, res) => {
+app.get('/', (_, res) => {
     console.log("hello");
     res.send('<h2> App is running !! </h2>');
 
