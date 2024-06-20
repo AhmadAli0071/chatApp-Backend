@@ -70,6 +70,9 @@ export const register = asyncHandler(async (req, res) => {
     }
 })
 export const login = asyncHandler(async (req, res) => {
+    console.log('NODE_ENV:', process.env.NODE_ENV);
+    console.log('FRONTEND_ORIGIN_DEV:', process.env.FRONTEND_ORIGIN_DEV);
+    console.log('FRONTEND_ORIGIN_PROD:', process.env.FRONTEND_ORIGIN_PROD);
     try {
         const { email, password } = req.body;
         if (!email) {
