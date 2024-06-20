@@ -11,7 +11,7 @@ const FRONTEND_ORIGIN = process.env.NODE_ENV === 'production'
     : process.env.FRONTEND_ORIGIN_DEV;
 const io = new Server(server, {
     cors: {
-        origin: "https://chat-app-frontend-psi-weld.vercel.app",
+        origin: "https://talhamehmood.netlify.app",
         methods: ["GET", "POST"],
         credentials: true,
     }
