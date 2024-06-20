@@ -60,8 +60,8 @@
     "validator": "^13.11.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon  index.js"
+    "start": "node api/index.js",
+    "dev": "nodemon  api/index.js"
   },
   "author": "",
   "license": "ISC",
