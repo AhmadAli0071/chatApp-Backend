@@ -27,7 +27,7 @@ app.use(cookieParser())
 
 app.get('/api/v1/', (_, res) => {
     console.log("hello");
-    res.send(`<h2> ${process.env.NODE_ENV === 'production' ? "production" : "development"} </h2>`);
+    res.send(`<h2> ${process.env.NODE_ENV === 'production' ? "production deployed" : "development"} </h2>`);
 
 });
 app.use("/api/v1/user", userRoutes);
