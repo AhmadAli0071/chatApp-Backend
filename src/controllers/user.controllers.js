@@ -58,7 +58,7 @@ export const register = asyncHandler(async (req, res) => {
         const options = {
             httpOnly: process.env.NODE_ENV === 'production',
             secure: process.env.NODE_ENV === 'production',
-            sameSite: "None"
+            sameSite: process.env.NODE_ENV === 'production' && "None"
         };
         return res
             .status(201)
@@ -70,9 +70,7 @@ export const register = asyncHandler(async (req, res) => {
     }
 })
 export const login = asyncHandler(async (req, res) => {
-    console.log('NODE_ENV:', process.env.NODE_ENV);
-    console.log('FRONTEND_ORIGIN_DEV:', process.env.FRONTEND_ORIGIN_DEV);
-    console.log('FRONTEND_ORIGIN_PROD:', process.env.FRONTEND_ORIGIN_PROD);
+
     try {
         const { email, password } = req.body;
         if (!email) {
@@ -96,7 +94,7 @@ export const login = asyncHandler(async (req, res) => {
         const options = {
             httpOnly: process.env.NODE_ENV === 'production',
             secure: process.env.NODE_ENV === 'production',
-            sameSite: "None"
+            sameSite: process.env.NODE_ENV === 'production' && "None"
         };
         return res
             .status(201)
@@ -271,7 +269,7 @@ export const logoutUser = asyncHandler(async (req, res) => {
         const options = {
             httpOnly: process.env.NODE_ENV === 'production',
             secure: process.env.NODE_ENV === 'production',
-            sameSite: "None"
+            sameSite: process.env.NODE_ENV === 'production' && "None"
         };
         return res
             .status(200)
